@@ -1,8 +1,8 @@
-# a = input("write a number: ")
-# b = input("write a number: ")   
-# c = int(a) + int(b)
-# print(f"The Numbers given are first number - {a},\nThe Second Number- {b} \nThe sum of the two numbers is:{c}")
-# print(c) 
+a = input("write a number: ")
+b = input("write a number: ")   
+c = int(a) + int(b)
+print(f"The Numbers given are first number - {a},\nThe Second Number- {b} \nThe sum of the two numbers is:{c}")
+print(c) 
 
 
 
@@ -38,3 +38,16 @@ print(f"Multiplication: {multiplication}")
 print(f"Division: {division}")
 print(f"Modulus: {modulus}")
 print(f"Exponent: {exponent}")
+
+
+
+x = int(input("Enter a number: "))
+y = int(input("Enter a number: "))
+
+a = x + y
+b = x - y
+c = x * y
+d = x / y
+e = x % y
+g = x ** y
+print(f" Addition: {a}, \n Subtraction: {b}, \n Multiplication: {c}, \n Division: {d}, \n Modulus: {e}, \n Exponent: {g}")
