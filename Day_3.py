@@ -95,3 +95,30 @@ while value != 0:
     break
 else: 
     print("value should not be zero")
+
+
+rows=int(input("Enter the number of rows: "))
+cols=int(input("Enter the number of columns: "))
+letter = 65
+alphabet = 'A'
+for i in range(rows):
+    for j in range(cols):
+        print(chr(letter), end=" ")
+        letter += 1
+    print()
+
+for r in range(rows):
+    for c in range(cols):
+        print(alphabet, end=" ")
+        alphabet = chr(ord(alphabet) +1)
+    print()
+
+for i in range(rows):
+    print(chr(letter), end=" ")
+    letter += 1
+
+for j  in range(cols):
+    print("*", end = " ")
+
+for k in range (rows):
+    print("*")
