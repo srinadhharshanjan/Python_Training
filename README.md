@@ -185,3 +185,18 @@ set
 
 Dictionary : {"key" :"value1", ...........}
 set :{"key1","key2",.............}
+
+
+Day 7 ---> Functions
+
+predefied or user defined code blocks that are reusable and used by user in various aspects of his coding.
+
+it starts "def" keyword 
+
+Syntax:
+
+def any_name_of_the_function(paramerters as required):
+	code block
+
+
+	return value
