@@ -171,3 +171,17 @@ max
 count
 len
 
+Day_6---> Dictionaries & Sets
+
+int
+float
+char
+Boolean
+tuple
+list
+string
+Dict 
+set 
+
+Dictionary : {"key" :"value1", ...........}
+set :{"key1","key2",.............}
