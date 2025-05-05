@@ -200,3 +200,10 @@ def any_name_of_the_function(paramerters as required):
 
 
 	return value
+
+Day - 9 ----> String Functions 
+
+Split() ----> any particular key value based divide the string 
+strip()-----> to remove empty spaces 
+replace() -----> to replace one word with another 
+join() -----> to combine words after splitting 

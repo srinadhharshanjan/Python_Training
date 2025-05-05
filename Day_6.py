@@ -9,10 +9,8 @@ welcome_user()
 def lister():
     my_list = []
     limit = int(input("Enter the maximum number of items to add: "))
-    
     list_add = input("Enter the items separated by commas: ")
     list_add = list_add.split(",")
-
     for item in list_add:
         if len(my_list) < limit:
             my_list.append(item.strip())
