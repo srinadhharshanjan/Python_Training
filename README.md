@@ -207,3 +207,25 @@ Split() ----> any particular key value based divide the string
 strip()-----> to remove empty spaces 
 replace() -----> to replace one word with another 
 join() -----> to combine words after splitting 
+
+Day - 10  ----> String formatting
+
+
+print("")
+
+print(f" {}")
+
+print("hello .format.{}")
+
+name = time
+print("%s" %name)
+
+
+Day -11 ---> list comprehensions
+
+[expression for item in iterable if condition]
+
+my_list = [x**2 for x in range(5)]
+
+
+
