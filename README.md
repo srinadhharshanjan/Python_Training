@@ -228,4 +228,25 @@ Day -11 ---> list comprehensions
 my_list = [x**2 for x in range(5)]
 
 
+Day-14
 
+Function	Purpose
+ open()	        Opens a file
+.read()	        Reads the whole file
+.readline()	Reads one line at a time
+.write()	Writes to a file
+ with	        Used as a context manager
+'r' / 'w' / 'a'	File modes: read / write
+
+Day-15
+
+CSV (Comma Separated Values)
+Used for spreadsheets or tables
+
+JSON (JavaScript Object Notation)
+Used for structured data like dictionaries/lists
+
+
+Module	Function
+csv	csv.reader, csv.writer
+json	json.load, json.dump
