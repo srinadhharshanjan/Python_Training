@@ -250,3 +250,92 @@ Used for structured data like dictionaries/lists
 Module	Function
 csv	csv.reader, csv.writer
 json	json.load, json.dump
+
+Day 16 & 17
+
+
+CRUD ---> Create, Read, Update, Delete
+
+What is Object-Oriented Programming (OOP)?
+OOP is a programming paradigm where you structure code using objects and classes. It helps:
+
+Reduce repetition
+
+Improve modularity
+
+Enhance reusability and scalability
+
+What is a Class?
+A class is like a blueprint for creating objects. It defines:
+
+Attributes (variables/data)
+
+Methods (functions/actions)
+class Dog:
+    # This is a class
+    def __init__(self, name, breed):
+        self.name = name
+        self.breed = breed
+
+What is an Object?
+An object is a specific instance of a class.
+You create it using the class:
+my_dog = Dog("Bruno", "Labrador")
+
+The __init__() Method
+A special method (constructor) that initializes object attributes when the object is created.
+
+self refers to the current object.
+
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+
+The self Keyword
+Always the first parameter of instance methods.
+
+Refers to the current object.
+
+Used to access attributes and methods.
+
+Instance Attributes
+Defined in __init__()
+
+Specific to each object
+
+🔹 Instance Methods
+Functions defined inside the class
+
+Use self to access attributes or call other methods
+
+class Circle:
+    def __init__(self, radius):
+        self.radius = radius
+
+    def area(self):
+        return 3.14 * self.radius * self.radius
+
+
+
+Key Concepts Comparison
+
+Concept			Description
+class			Blueprint for objects
+object			An instance of a class
+__init__()		Constructor method
+self			Reference to the current object
+Instance Attribute	Variable tied to each object
+Method			Function defined inside a class
+
+
+What is a Constructor in Python?
+A constructor is a special method that is automatically called when an object is created from a class. It is used to initialize the object’s properties (attributes).
+
+ In Python, the constructor is the __init__() method.
+
+Opposite of Constructor: Destructor
+A destructor is a method that is called automatically when an object is deleted or destroyed, usually to clean up resources like files or network connections.
+
+In Python, the destructor is the __del__() method.
