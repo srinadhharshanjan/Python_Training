@@ -339,3 +339,102 @@ Opposite of Constructor: Destructor
 A destructor is a method that is called automatically when an object is deleted or destroyed, usually to clean up resources like files or network connections.
 
 In Python, the destructor is the __del__() method.
+
+
+Day-18
+
+What is Inheritance?
+Inheritance allows one class (child/subclass) to inherit the properties and methods of another class (parent/base class).
+
+✅ Why Use Inheritance?
+Reuse code
+
+Maintain consistency across related classes
+
+Add or extend features in child classes
+
+class Parent:
+    def greet(self):
+        print("Hello from Parent")
+
+class Child(Parent):
+    def greet_child(self):
+        print("Hello from Child")
+
+obj = Child()
+obj.greet()         # Inherited from Parent
+obj.greet_child()   # From Child
+
+
+What is super() in Python?
+The super() function is used to call a method from a parent (or superclass) inside a child class.
+
+
+Why use super()?
+When a child class overrides a method from its parent class (like _init_() or attack()), you might still want to reuse part of the parent's method. Instead of rewriting the same code again, super() helps you reuse the parent’s functionality.
+
+
+Day-19
+
+Encapsulation & Private Variables
+
+Encapsulation = Hiding internal data and showing only what is necessary through methods.
+
+What is Encapsulation?
+Encapsulation is the OOP principle of binding data (variables) and methods (functions) that operate on that data into a single unit, called a class.
+It also involves restricting direct access to some components of an object to protect the integrity of the data.
+
+Why Encapsulation?
+✅ Prevents unauthorized access to sensitive data
+
+✅ Makes code modular and easier to debug
+
+✅ Allows validation and control using getter/setter methods
+
+✅ Hides complexity from the user
+
+Python Access Modifiers
+Type	Syntax	Accessibility
+Public	self.value	Accessible everywhere
+Protected	self._value	Shouldn't be accessed outside the class
+Private	self.__value	Name mangled, access limited to class only
+
+Python doesn’t have real "private" — it uses name mangling.
+
+Access Modifiers in Python:
+
+public: accessible everywhere (default)
+
+_protected: conventionally internal use only
+
+__private: name mangled, meant to be truly private
+
+
+Real-Life Analogies
+Real Life	Python Encapsulation
+ATM card	Class
+Card PIN	Private variable
+Withdraw screen	Public method (withdraw)
+Bank software	Encapsulated logic
+
+Day_20
+
+What is Polymorphism?
+Polymorphism means "many forms".
+In programming, it allows objects of different classes to be treated as objects of a common superclass, while still calling their specific implementations.
+
+🔁 In Python, this often happens through method overriding and duck typing (if it walks like a duck...).
+
+
+Key Concepts
+Concept	Description
+Polymorphism	Different classes implement the same method differently
+Method Overriding	Subclass redefines a method from the parent class
+Duck Typing	Python relies on method names and behavior rather than strict types
+
+Real-World Analogy
+Situation	Polymorphism Example
+Payment systems	.pay() might work differently in UPI, credit card, or PayPal classes
+UI Components	.draw() can differ for buttons, sliders, checkboxes
+File Readers	.read() method works for CSV, JSON, or TXT readers
+
