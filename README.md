@@ -438,3 +438,147 @@ Payment systems	.pay() might work differently in UPI, credit card, or PayPal cla
 UI Components	.draw() can differ for buttons, sliders, checkboxes
 File Readers	.read() method works for CSV, JSON, or TXT readers
 
+Day_21
+
+Lambda Functions (Anonymous Functions)
+✅ What are they?
+A lambda function is a small, anonymous function created using the lambda keyword. It can have any number of arguments, but only one expression.
+
+Syntax:
+lambda arguments: expression
+
+Where it's used:
+When a short function is needed temporarily, like in map(), filter(), or sorting.
+
+Used in GUI buttons, data transformation, or sorting custom objects.
+
+map(function, iterable)
+✅ What is map()?
+Applies a function to every item in an iterable (like a list, tuple).
+
+Returns a map object (which can be converted to list, tuple, etc.)
+
+map(function, iterable)
+
+Real-World Use:
+Converting all user inputs from string to int
+
+Applying discounts to a list of prices
+
+Converting temperature values
+
+filter(function, iterable)
+✅ What is filter()?
+Returns only those items from an iterable for which the function returns True
+
+Good for extracting a subset of data
+
+filter(function, iterable)
+Real-World Use:
+Filtering valid email addresses
+
+Keeping students who passed
+
+Removing empty or zero values
+
+4. reduce(function, iterable)
+✅ What is reduce()?
+Applies a function cumulatively to the items of an iterable.
+
+Unlike map() and filter(), it reduces the iterable to a single value.
+
+To use reduce(), you must import it from functools.
+
+from functools import reduce
+reduce(function, iterable)
+
+Real-World Use:
+Summing values
+
+Finding factorial
+
+Combining strings
+
+Aggregating scores, profits, etc.
+
+Comparison Table
+Feature			lambda			map()		filter()				reduce()
+Use Case	Create quick function	Transform values	Filter values based on condition	Reduce to single value
+Returns			Function	map object (iterator)	filter object (iterator)		Single value
+Import?			No			No		No					Yes (functools)
+Can use lambda?		✅ Yes			✅ Yes		✅ Yes					✅ Yes
+
+Real-World Applications
+Use Case				Tool Used
+Clean up user data			map(), lambda, strip()
+Filter valid email addresses		filter()
+Aggregate total sales from data		reduce()
+Remove empty responses from survey	filter()
+Increase salary by 10%			map()
+Calculate average, sum, or product	reduce()
+
+Day - 22
+Theory: What is a Decorator?
+A decorator is a function that takes another function as input, adds extra functionality, and returns the new function — without modifying the original function's code.
+
+Think of decorators as wrapping functions — like giving your game character an extra power-up without changing who they are.
+
+How It Works
+@my_decorator applies the wrapper function around say_hello.
+
+This is function wrapping.
+
+
+What is a Decorator?
+A decorator is a higher-order function — it takes another function as an argument, adds some functionality to it, and returns a new function. It's a form of metaprogramming, meaning your code modifies other parts of your code.
+
+Why Use Decorators?
+They allow code reuse, separation of concerns, and dynamic behavior extension of functions or methods without modifying their source code.
+
+
+Common use cases include:
+
+Logging
+
+Caching
+
+Access control / authentication
+
+Input validation
+
+Performance monitoring
+
+Pre/post conditions for testing
+
+In Code Terms:
+A decorator is a function that:
+
+Takes another function as input,
+
+Adds some new behavior to it (before or after),
+
+Then returns the updated function.
+
+
+
+
+def decorator_function(original_function):
+    def wrapper_function(*args, **kwargs):
+        # Code before function
+        result = original_function(*args, **kwargs)
+        # Code after function
+        return result
+    return wrapper_function
+
+What is **kwargs in Python?
+**kwargs stands for "keyword arguments". It allows a function to accept any number of named arguments (i.e., arguments passed with a name, like age=25), and it collects them into a dictionary.
+
+Real-World Use Cases
+
+Use Case			Example
+Logging				@log_action 	logs calls to a function
+Access Control			@login_required in Django
+Timing				@timer 		decorator to measure execution time
+Testing				@pytest.mark.skip, @unittest.skip
+Web Frameworks			Flask uses @app.route('/home') to define endpoints
+Game Mechanics			@boost, @shield for dynamic player state changes

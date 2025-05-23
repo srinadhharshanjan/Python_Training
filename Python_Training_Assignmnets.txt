@@ -1,0 +1,1653 @@
+day--3
+use if/elif/else conditions write simple calculations
+
+a=int(input("enter the number: "))
+# b=int(input("enter the number: "))
+# c=input("enter the operator:")
+# if c=="+":
+#     print("the sum of ",a+b)
+# elif c=="-":    
+#     print("the difference of ",a-b)
+# elif c=="*":                    
+#     print("the product of ",a*b)
+# elif c=="/":
+#     print("the division of ",a/b)
+# else:
+#     print("invalid operator")
+
+
+--task:
+# king=input("king enter into the (forest/lake): ")
+# if king=="forest":
+#     print("king is in forest")
+# forest=input("enter the direction left for animals,right for queen: ") 
+# if forest=="left":
+#     print("king is attack by animals,then king is dead")
+# elif forest=="right":
+#     print("the queen is here")
+
+# elif king=="lake":
+#     print("king is in lake")
+# lake=input("enter the direction left for queen ,right for crocodile): ")
+# if lake=="right":
+#     print("king is attack by crocodile,then king is dead")
+# elif lake=="left":
+#     print("the queen is here")
+# else:
+#     print("king is not in forest or lake")
+  
+
+
+
+--largest of 2 numbers using comparision
+# a=int(input("enter the number:"))
+# b=int(input("enter the number: "))   
+# if a>b:
+#      print("the larger number is ",a)
+# else:
+#      print("the largest number is ",b)
+
+
+
+
+--largest of 3 num using logicaland comparision
+
+# x=int(input("enter the number:"))
+# y=int(input("enter the number:"))
+# z=int(input("enter the number:"))
+# if x>y and x>z:
+#     print(f"the largest number is ",x)
+# elif x<=y  and z<y:
+#     print("the largest number is ",y)
+# else:
+#     print("the largest number is ",z)
+
+day--4
+task--
+using while condition guess the secret number and loop should continue until he gets the correct ans
+# secret=5
+# guess=0
+# while guess!=secret:
+#     guess=int(input("guess the number between 1 and 10: "))
+# if guess==secret:
+#    print("your correct")
+# else:
+#    print("your wrong")
+
+--bomb defuser
+secret_code="1234"
+# for seconds in range(10,0,-1):
+#    print("enter the number of seconds:" ,seconds)
+#    a=int(input("enter the secret code: "))
+#    if a==secret_code:
+#       print("bomb is defused")
+#    else:
+#       print("bomb is exploded") 
+#       break
+
+
+--inveted triangle
+rows=int(input("enter the number of rows: "))
+for i in range(rows,0,-1):
+    spaces= (rows - i)*" "
+    stars=" * " * (1*i)
+    print(spaces + stars)
+
+--die
+ die=5
+# i=0
+# while i!=die:
+#    i=int(input("enter the number: "))
+# if i==die:
+#    print("you win")
+# else:
+#    print("you lose")  
+
+
+day--5
+
+bag limit is 5  more than 5 bag is full
+
+after full the bag do you want remove any element
+
+bag=()
+# items=int(input("enter the number of  items in bag: "))
+# for i in range(items):
+#     item=input("enter the item: ")
+#     if  items<6:
+#         print(f"{item} push the item in bag ")  
+# else:
+#     print("bag is full")
+# element=input("after full the bag do you want to remove the item (Yes/No): ")
+# if element=='yes':
+#     remove=input("remove the item in bag ,enter item you want to remove in bag{item}")
+#     print(f"{remove} remove the item in bag")
+# else:
+#     print(f"add an element")
+
+
+list[3,4,5]
+secret
+# list=[1,2,3,4,5,67,8,9,10]
+# secret_code=1
+# for i in range(5):
+#     list=int(input(f"guess the secret code in list{list}: "))
+#     if list==secret_code:
+#         print("bomb is defused")
+#         break 
+# else: 
+#     print("bomb is over")          
+
+
+# n=5
+# num=1
+# for i in range(1,5,1):
+#     a=" "*(n-i)
+#     print(a,end='')
+#     for j in range(1,i+1):
+#         print("",num,end='')
+#         num+=1
+#     print('')    
+
+# n=5
+# aplahbet=ord('A')
+# for i in range(5,0,-1):
+#     a=" "*(n-i)
+#     print(a,end='')
+#     for j in range(1,i+1):
+#         print(f" {chr(aplahbet)}",end='')
+#         aplahbet+=1
+#     print('')  
+
+
+
+DAY-6
+bag=()
+items=int(inpupt("enter the number of  items in bag: "))
+for i in range(items):
+     item=int("enter the item: ")
+     if item<=5:
+        print(f,bag is limit{item})
+     else:
+        print(bag is full)
+      
+
+using loops and list or tuple you have to defuse the bomb so that when the secret was correctly given it will be defuse properly or else the count down go on till it reaches 0 from 10 and make it jump 2 sec for every wrong ans
+
+countdown=10
+# secret_code=[5]
+# while countdown>0:
+#     seconds=int(input(f"count down the number from 10 to 1 timeleft {countdown}: "))
+#     if seconds==secret_code:
+#         print("bomb is defused")
+#         break
+#     else:
+#         print("Wrong code! Decreasing the countdown by 2 seconds.")
+#         countdown -= 2 
+# print("bomb is exploded")
+
+
+
+Assignment 1:
+Build a Student Gradebook that stores student names and their marks. You should:
+
+Add multiple students using a loop.
+
+Allow searching for a student’s marks using .get().
+
+Display all students using .keys() and .items().
+
+Update a student’s marks.
+
+Remove a student from the record.
+
+Handle invalid student lookups gracefully. 
+
+
+student_gradebook={}
+for i in range(0,5):
+    name=input("enter the name: ") 
+    marks=int(input("enter the marks: "))
+    student_gradebook[name]=marks
+    print(student_gradebook)
+if name in student_gradebook:
+    name=input("enter the name: ")   
+    print(student_gradebook.get(name))
+    print(student_gradebook.keys())
+    print(student_gradebook.values())
+    print(student_gradebook.items())
+    name=input("enter the name: ") 
+    marks=int(input("enter the marks: "))
+    student_gradebook.update({name:marks})
+    print(student_gradebook)
+    name=input("enter the name: ") 
+    student_gradebook.pop(name)
+    print(student_gradebook)
+name=input("enter the name: ")
+if name in student_gradebook:
+   print("valid student name")
+else:
+   print("invalid student name")
+
+
+ 
+Assignment 2:Build a Unique Travel Log App that:
+
+Collects city names visited by the user (use a set)..
+
+Ensures no duplicates are added. 
+
+Allows the user to check if a city was already visited.
+
+Combines travel history with a friend’s travel history (use .union()).
+
+Shows common cities visited (use .intersection()).
+
+Shows unique places only the user visited (use .difference()). 
+
+
+# unique_travellog=set()
+# for i in range(0,2):
+#     city=input("enter the name of the city that visited by the user: ")
+#     unique_travellog.add(city)
+#     print(unique_travellog)
+# city=input("enter the city:")
+# if city in unique_travellog:
+#     print("this city is already visited by the user")
+# else:
+#     unique_travellog.add(city) 
+#     print(unique_travellog) 
+# friends_history=set()
+# for i in range(0,2):
+#     city=input("enter the name of the city that visited by the user friend: ")
+#     friends_history.add(city)
+#     print(friends_history)
+# combine=unique_travellog.union(friends_history)
+# print("combination of the both cites: ",combine)
+# common=unique_travellog.intersection(friends_history)
+# print(common)
+# unique=unique_travellog.difference(friends_history)
+# print(unique)
+
+
+
+DAY-7 
+ass1
+any number to check even or odd
+ass ---->1
+# def num(a):
+#     if a%2==0:
+#         return "even"
+#     else:
+#         return "odd"
+# a=int(input("enter any number to check even or odd: "))
+# print(num(a))
+
+
+factorial number
+
+
+# def num(n):
+#   fact=1
+#   for i in range(1,n+1):
+#     fact=fact*i
+#   return fact
+# n=int(input("enter the number: "))
+# print("factorial of n is :",num(n))
+
+
+
+simple calculator
+
+ass -->
+# def cal(a,b):
+#     if a+b:
+#         return a+b
+#     elif a - b:
+#         return a-b
+#     elif a*b:
+#         return a*b
+#     elif a%b:
+#         return a%b
+#     else:
+#         return invalid 
+# a = int(input("Enter a number: "))
+# b = int(input("Enter a number: "))
+# opt = input("Enter an operator: ,+,-,*,% ")
+# if opt == "+":
+#     print(cal(a,b))
+# elif opt == "-":
+#     print(cal(a,b))
+# elif opt == "*":
+#     print(cal(a,b))
+# elif opt =="%":
+#     print(cal(a,b))
+# else: 
+#     print("Invalid Operator")
+
+
+
+you have to check password strength if less than 8 characters password weak
+if password characters only you should print okay okay
+if password greater than 8 characters password is strong
+
+ def password():
+#     limit=8
+#     list_add = input("Enter the password: ")
+#     if int(len(list_add))<limit:
+#         return 'weak'
+#     elif int(len(list_add))>limit:
+#         return 'strong'
+#     else:
+#         return 'okay okay'
+# print(password())
+
+
+
+
+create a mini contact book in addition ,deletion,search
+
+def contactbook():
+#     contacts={}
+#     limit=int(input("enter the number of contacts you want to add: "))
+#     for i in range(limit):
+#        name=input("enter the contact name: ")
+#        number=int(input("enter the contact number: "))
+#        contacts[name]=number
+#     print(contacts)
+#     addition_contact=input("add  the contact name: ")
+#     if addition_contact in contacts:
+#         print("name is already exist")
+#     else:
+#         number=int(input("enter the contact number: "))
+#         contacts[addition_contact]=number
+#     print(contacts)
+#     if name in contacts:
+#         name=input("to search  the name: ")   
+#         print(contacts.get(name))
+#     name=input("to delete the contact name: ")
+#     print(contacts.pop(name))
+#     return contacts
+# contactbook()
+
+
+Game Description:  
+The player starts at the beach.
+
+They must choose between two paths: forest or mountain.
+
+Each path has a different challenge (like solving a riddle or making a guess).
+
+Based on choices and results, they either reach the treasure or lose.
+
+📘 Requirements:
+Use functions to:
+
+Show intro and rules
+
+Handle each location: beach(), forest(), mountain(), treasure()
+                                                                                                                                                                                                                                                                                      
+Ask user input and return results
+
+Use if-else and return values
+
+Use a loop to allow retry
+def beach():
+    print("You're at the beach. Choose your path:")
+    choice = input("forest or mountain? ")
+    return choice
+
+def forest():
+    print("You found a wise owl who gives you a riddle!")
+    # Riddle challenge
+    # If correct → return "treasure", else → return "lose"
+
+def mountain():
+    print("You must guess a number between 1 and 5.")
+    # If correct → return "treasure", else → return "lose"
+
+def treasure():
+    print("🎉 Congratulations! You found the treasure!")
+
+# Main game fl
+
+
+def beach():
+#     print("You're at the beach. Choose your path:")
+#     choice = input("choose your path forest or mountain? ")
+#     if choice=='forest':
+#         print("you have to face the riddle challenge")
+#         return forest()
+#     elif choice=='mountain':
+#         print("you have to  guess the number")
+#         return mountain()
+# def forest():
+#     print("you have enter into forest")
+#     choice=input("enter your choice left or right: ")
+#     if choice=="left":
+#         print("you found the riddle challenge")
+#     else:
+#         print("you are lost in forest")
+#     puzzle_answer=input("jumbile the word:vide ")
+#     correct="devi"
+#     if correct==puzzle_answer:
+#         return treasure()
+#     else:
+#         print("you lost")
+def mountain():
+#     print("you have enter into mountain")
+#     choice=input("enter your choice left or right: ")
+#     if choice=="left":
+#         print("you found the number guessing game ")
+#     else:
+#         print("you lost in the mountain")
+#     print("here you have some instructions,you have guess the number  within 10 sec ,it jump 2 sec for every wrong ans")
+#     hint=print("You must guess a number between 1 and 5.")
+#     countdown=10
+#     secret_number=[5]
+#     while countdown>0:
+#         seconds=int(input(f"count down the number from 10 to 1 timeleft {countdown}: "))
+#         if seconds in secret_number:
+#             return treasure()
+#         else:
+#             print("Wrong code! Decreasing the countdown by 2 seconds.")
+#             countdown -= 2 
+#     print("you lost")
+# def treasure(): 
+#     print("🎉 Congratulations! You found the treasure!")
+# beach()
+ 
+
+
+
+Day - 8 ---> Mini Porjects
+
+Mini Project 1:
+Game Summary:
+The player creates a character and navigates through rooms.
+
+Each room has choices: fight a monster, find items, or solve riddles.
+
+Player picks up items (stored in a list), earns tokens (stored in a set), and tracks health/stats (dictionary).
+
+Use functions like battle(), explore_room(), show_inventory() etc.
+
+Example Features:
+Character creation via input.
+
+Conditional branching (choose sword or shield? fight or run?).
+
+Inventory and token tracking.
+
+Game ends when player reaches the “Treasure Gate” or loses all health.
+
+ def play_game():
+#     player = input("Enter the character of the player: ")
+#     choice = int(input("1. room  2. room  3. room: "))
+#     health_coins = 10
+#     items = []
+#     tokens = set()
+#     explore_rooms(choice, health_coins, items, tokens)
+
+# def explore_rooms(choice, health_coins, items, tokens):
+#     if choice == 1:
+#         action = input("Here you have to fight with monster (fight/run): ")
+#         if action == "fight":
+#             sword = input("Pick up the sword or shield: ")
+#             fight_with = input("Fight with the monster using sword or shield: ")
+#             if fight_with == sword:
+#                 print("You win and gain more coins and move to next room.")
+#                 health_coins += 2
+#             else:
+#                 health_coins -= 2
+#                 print("You lose some coins.")
+#         elif action == "run":
+#             print("You run away from the monster and enter into the next room.")
+#         else:
+#             print("Invalid action.")
+
+#     elif choice == 2:
+#         find_item= input("Here, pick up the item: ")
+#         if find_item=="silver":
+#             print("You collected all items! You gain more coins and move to the next room.")
+#             items.append("find_item")
+#             health_coins += 2
+#         else:
+#             health_coins -= 2
+#             print("You lose health coins. Move to next room.")
+
+#     elif choice == 3: 
+#         answer = input("Solve the riddle: What has to be broken before you can use it? ")
+#         if answer == "egg":
+#             print("Correct! You gain the token.")
+#             tokens.add("token")
+#             health_coins += 2
+#         else:
+#             print("Wrong answer!")
+#             health_coins -= 2
+#             print("You lose health coins. Move to next room.")
+#     else:
+#         print("Invalid choice. Please choose a valid room.")
+#         return
+
+#     print("Health coins:", health_coins)
+#     if health_coins >= 10:
+#         print("You have enough health coins to win the game!")
+#         print("You found the Treasure! You win!")
+#     else:
+#         print("Game Over!")
+# play_game()
+
+    
+
+
+
+
+
+
+Mini Project 2 :
+Project Summary:
+The system allows adding student data: name, roll no., subject-wise marks.
+
+Calculates average and grade.
+
+Supports search by roll number or name.
+
+Displays all students in a sorted list.
+ Example Features:
+Menu with options: Add, Search, List All, Exit
+
+Grade calculation using if-else
+
+Uses tuple or dictionary per student
+
+Data stored temporarily in lists/dictionaries
+
+                 
+def student_gradebook():
+#     student=[]
+#     limit=int(input("enter the no.of students: "))
+#     for i in range(limit):
+#         student_data={}
+#         subject_wisemarks={}
+#         name=input("enter the name of the student: ")
+#         rollno=int(input("enter the roll no of the student: "))
+#         for i in range(3):
+#             subject=input("enter the subject name: ")
+#             marks=int(input("enter the marks of the student: "))
+#             subject_wisemarks[subject]=marks 
+#         student_data['student_name']=name
+#         student_data['student_rollno']=rollno
+#         student_data['subject_wisemarks']= subject_wisemarks 
+#         # student_data['subject_wisemarks'] = " / ".join(f"{subject}: {marks}" for subject, marks in subject_wisemarks.items())
+#         student_data['total_marks']=sum(subject_wisemarks.values())
+#         student_data['average_marks']=sum(subject_wisemarks.values())/len(subject_wisemarks)
+#         if student_data['total_marks'] > 300:
+#             grade='A'
+#         elif student_data['total_marks'] > 250:
+#             grade='B'
+#         elif student_data['total_marks'] > 150:
+#             grade='C'
+#         else:
+#             grade='fail'
+#         student_data['grade']=grade
+#         print(student_data)
+#     name=input("enter name to sort: " )
+#     sort=dict(sorted(student_data.items()))
+#     print(sort)
+#     search_name = input("\nEnter the name to search: ")
+#     found=False
+#     for name in student:
+#         if name['student_name'] == search_name:  
+#             print("Student found:", student)
+#             found=True
+#         else:
+#             print(f"{search_name} not found in the records.")
+   
+# student_gradebook()
+    
+
+
+Mini Project 3:
+Project Summary:
+Create an interactive console-based grocery assistant that allows users to:
+
+Browse items from a predefined store (using a tuple or list).
+
+Add items to their cart (use dictionary to store item and quantity).
+
+View current cart and total bill.
+
+Remove an item from the cart.
+
+Get suggestions for healthy items (optional logic).
+
+Checkout and print a formatted bill.
+
+ 
+For Mini Project 3:
+Sample Features:
+Search for an item by name.
+
+Input quantity and auto-calculate total.
+
+Prevent duplicate additions using sets.
+
+Print a receipt at checkout using a function.
+
+
+def smart_grocery():
+    browser_items={}
+    cart={}
+    limit=int(input("enter the no of items: "))
+    for i in range(limit):
+        items=input("enter the name of items: ")
+        cost=int(input("enter cost of the items: "))
+        browser_items[items]=(cost)
+    while True:  
+        choice=input("Welcome to Smart Grocery!  \n 1. View Store Items\n 2. Add to Cart\n 3. View Cart\n 4. Remove Item\n 5. Checkout\n 6. Exit: ")
+        if choice=="1":
+            print(browser_items)
+        elif choice=="2":
+            items=input("enter add item to cart:")
+            if items in browser_items:
+                quantity=int(input("enter quantity of the item: "))
+                for i in range(quantity):
+                    cart[items]=browser_items.get(items)
+                    print(cart)
+            else:
+                print(f"{items} not found")
+        elif choice=="3":
+                print(cart)
+        elif choice=="4":
+            items=input("enter the item to remove from cart:")
+            if items in cart:
+                cart[items]=cart.pop(items)
+                print(cart)
+            else:
+                print(f"{items} not found in cart")
+        elif choice=="5":
+            browser_items[items]=sum(browser_items.values()) 
+            print(f"your total bill is {browser_items[items]}")
+            print("thank you for shopping")              
+        elif choice=='6':
+            print('exit')
+            break
+smart_grocery()
+
+
+
+
+day_9
+
+in a paragraph using split,strip fun to find length of the para 
+
+
+# # def ass1():
+# #     paragarph="  My name is p.sri durga devi.  who is trying to learn  python bacis.  as a fresher. which is usefull to me to find a job.  " 
+# #     paragarph=paragarph.strip()
+# #     text=paragarph.split(".")
+# #     print(text)
+# #     print(len(paragarph))
+# # ass1() 
+
+ass--2
+you have take 2 input values
+1 is first name and 2nd is sur name
+join two words their should join with_ and no spaces
+
+
+# # def ass2():
+# #     my_list=[]
+# #     name=input("enter your first name: ")
+# #     sur=input("enter your sur name: ")
+# #     my_list.append(name)
+# #     my_list.append(sur)
+# #     print("_".join(my_list))
+# #     print(my_list)
+# # ass2()
+
+ 
+ass--3
+set of negative to convert positive words
+
+
+# # def ass3():
+# #       text=" i am to lazy to do my daily home work and also boring to attend the daily class"
+# #       print(text.replace("lazy","hardworking").replace("boring","active"))
+# # ass3()
+
+
+
+
+
+day10&11
+ square=[x**2 for  x in range(1,11)]
+# print(square)
+
+# cube=[x**3 for x in range(1,11)]
+# print(f"cubic numbers{cube}")
+
+# even=[x for x in range(0,10) if x%2==0]
+# odd=[x for x in range(0,10) if x%2!=0]
+# print(even,odd)
+
+# prime=[x for x in range(2,10)  if all(x%j!=0 for j in range(2,x))]
+# print(" prime numbers", prime)
+
+
+
+
+day-->12
+
+
+--ass1
+print a 2d matrix rows columns  should be given
+rows=4
+columns=5
+for i in range(1,rows+1):
+    for j in range(1,columns+1):
+        print(f"{i*j:4}", end='')       
+    print()
+
+
+--ass2
+table grid
+rows=int(input("enter number of rows: "))
+columns=int(input("enter number of columns:"))
+matrix=[]
+for i in range(1,rows+1):
+    rows=[]
+    for j in range(1,columns+1):
+        rows.append(i*j)
+    matrix.append(rows)
+for rows in matrix:
+    for elements in rows:
+        print(f"{elements:4}",end='')
+    print()
+
+
+--ass3
+* pattern
+n=5
+for j in range(1,n+1):
+    a=" " * (n-j)
+    print(str(a)+"* "*j)
+for i in range(4,0,-1):
+    a=" " * (n-i)
+    print(str(a)+"* " *i)
+
+
+--ass4
+Mini Game: Treasure Grid
+Create a grid using nested lists (2D).
+
+Ask the user to guess the treasure’s row & column.
+
+Give hints: "Too far!", "Getting warmer!" etc., using conditions inside loops.
+
+def grid():
+    rows=int(input("enter number of rows: "))
+    columns=int(input("enter number of columns:"))
+    matrix=[]
+    for i in range(1,rows+1):
+        rows=[]
+        for j in range(1,columns+1):
+            rows.append(i*j)
+        matrix.append(rows)
+    for rows in matrix:
+        for elements in rows:
+            print(f"{elements:4}",end='')
+        print()
+    guess_row=int(input("guess the row between (0-4)"))
+    guess_col=int(input("guess the column between(0-4)"))
+    correct_ans=abs(guess_row)+abs(guess_col)
+    if correct_ans>3:
+        print("too far!")
+    elif correct_ans==2:
+        print("getting warmer!")
+    else:
+        print("you got the treasure")
+grid()
+
+
+
+
+day--13
+--ass1
+try except user given input number you have to check num is even or odd and have to handle erroe if the input is not a num
+
+try:
+    num=int(input("enter the number: "))
+    if num%2==0:
+        print(f"{num} is even")
+    else:
+        print(f"{num} is odd")
+except ValueError:
+    print("invalid num ")
+
+
+--ass2
+using cal ask 5 maths questions if the ans is not a number don't throw a but throw an exception
+def cal():
+    try:
+        num1=int(input("enter the number1: "))
+        num2=int(input("enter the number2:  "))
+        operators=input("enter the given operators:(+,-,<,>,**): ")
+        if operators =='+':
+            print(num1+num2)
+        elif operators =='-':
+            print(num1-num2)
+        elif operators =='<':
+            print(num1<num2)
+        elif operators =='>':
+            print(num1>num2)
+        elif operators=='**':
+            print(num1**2)
+        else:
+            print("invalid operator")
+    except ValueError:
+        print("please enter valid integer")
+cal()
+
+
+--ass3
+user giving the input name it should throw a exception not an error
+try:
+    name=input("enter the name: ")
+    # print(names)
+    print(f"{names}")
+except NameError:
+    print("invalid error")
+
+--ass4
+
+Code Escape Game
+Present choices to user:
+
+text
+Copy
+Edit
+Choose a wire to cut (red/blue/green):
+If they type an invalid color, catch it and show a funny error.
+Use try/except around all risky inputs.
+try:
+   choose=input("Choose a wire to cut (red/blue/green): ")
+   if choose=="red":
+    print("danger")
+   elif choose=="blue":
+    print("no danger, but not safe")
+   elif choose=="green":
+    print("safe")
+   else:
+    raise ValueError("invalid color")
+except ValueError:
+    print("oops!Are you trying to invent new wires?")
+
+
+
+day 14&15
+
+
+--Assignment 1: Personal Diary
+Objective: Create a simple diary app where the user can write and view journal entries.
+
+Tasks:
+
+Ask the user to write a new entry.
+
+Save it to a file called diary.txt.
+
+Add a feature to read all past entries.
+
+
+# def simple_dairy():
+#     new_entry=input("enter your today journal: ")
+#     with open("dairy.txt",'w') as file:
+#         print(file.write(new_entry))
+#     with open("dairy.txt",'a') as file:
+#         line=input("add to today journal:")
+#         print(file.write( "\t" + line))
+#     with open("dairy.txt",'r') as file:
+#         print(file.read())
+    
+# simple_dairy()
+
+--Assignment 2: Line & Word Counter
+Objective: Build a file analyzer tool.
+ 
+Tasks:
+
+Ask the user for a filename.
+
+Count how many lines and words are in the file.
+
+Print the results.
+
+
+# text=input("enter data in journal.txt: ")
+# with open("journal.txt",'w') as file:
+#     print(file.write(text))
+# try:
+#     with open("journal.txt",'r') as file:
+#         lines=file.readlines()
+#         num_lines=len(lines)
+#         num_words = sum(len(line.split()) for line in lines) 
+#         print(lines)
+#         print("number of lines ",num_lines)
+#         print("number of words",num_words)
+# except FileNotFoundError:
+#     print("file not found creat a new file")
+
+
+--Assignment 3: Search in File
+Objective: Implement a keyword search.
+
+Tasks:
+
+Read from notes.txt.
+
+Ask the user for a word to search.
+
+Display lines where the word is found.
+
+
+# def keyword_search():
+#     text=input("enter the text: ")
+#     with open("notes.txt",'w') as file:
+#         print(file.write(text))
+#     with open("notes.txt",'r') as file:
+#         print(file.read())
+#     try:
+#         search_word=input("enter word to search: ")
+#         if search_word in text:
+#             print(f" search word in text {search_word}")
+#         else:
+#             print("search word not in text")
+#     except FileNotFoundError:
+#         print("file is not found to search the word")
+# keyword_search()  
+
+
+--Assignment 4: Quiz Result Logger
+Objective: Write user names and their quiz scores to a file.
+
+
+Tasks:
+
+Take name and score as input.
+
+Write each new entry in results.txt without deleting previous entries (append mode).
+
+Show all entries after writing.
+
+
+# name=input("enter the name: ")
+# score=input("enter the score: ")
+# with open("result.txt","a") as file:
+#     print(file.write(name))
+#     print(file.write(score))
+# with open("result.txt",'r') as file:
+    #  print("\n show all entries")
+#     print(file.read()  )
+
+
+--Assignment 5: Student Grades CSV
+Objective: Store and retrieve student marks.
+
+Tasks:
+
+Take student names and marks as input.
+
+Save to grades.csv using csv.writer().
+
+Read the data and print formatted output using csv.reader().
+
+
+# import  csv
+# def student_grade():
+#     name=input("enter name of the student: ")
+#     marks=input("enter the marks of the student: ")
+#     try:
+#         with open("grade.csv",'w',newline='')as file:
+#             writer=csv.writer(file)
+#             writer.writerow(["name",'marks'])
+#             writer.writerow([name,marks])
+#         with open("grade.csv",'r',newline='') as file:
+#             print("student grade")
+#             reader=csv.reader(file)
+#             for row in reader:
+#                 print(row)
+#     except FileNotFoundError:
+#         print("file not found create a new file")
+
+# student_grade()
+
+harshanjan sri
+18:57
+--Assignment 6: Product Inventory
+Objective: Maintain a list of products and prices.
+
+Tasks:
+
+Ask the user to input multiple products with prices.
+
+Save them to a CSV file called inventory.csv.
+
+Read back the file and calculate the total value of all products.
+
+
+
+# import csv
+# def  inventory():
+#     total=0
+#     with open("inventory.csv","w",newline='') as file:
+#         writer=csv.writer(file)
+#         for i in range(2):
+#             product=input("enter the product name: ")
+#             price=float(input("enter their product price: "))
+#             writer.writerow([product,price])
+#     with open("inventory.csv","r",newline='') as file:
+#         reader=csv.reader(file)
+#         for row in reader:
+#             if len(row) == 2:
+#                 try:
+#                     total += float(row[1])
+#                 except ValueError:
+#                     print(f"Invalid price found: {row[1]}")
+
+#     print(f"Total value of all products: {total:f}")
+
+# inventory()
+
+
+
+-Assignment 7: Monster Encyclopedia
+Objective: Create a searchable encyclopedia using JSON.
+
+Tasks:
+
+Create a list of monster dictionaries (name, type, power).
+
+Save to monsters.json.
+
+Allow users to search monsters by name and print details.
+
+
+# import json
+# monstar=[{"name":"Shadow Maw","type":"Dark","power":"Absorbs light and emits a chilling aura"},
+# {"name":"Pyrofang","type":"Fire","power":"Unleashes fire blasts and molten claws"},
+# {"name":"Thunderbeast","type":"Electric","power":"Summons storms and releases lightning strikes"}]
+# with open("monstar.json","w") as file:
+#     json.dump(monstar,file)
+# search_name=input("enter the monstar name to search: ")
+# with open("monstar.json","r")as file:
+#         loaded_data=json.load(file)
+# for monstar in loaded_data:
+#     if search_name==monstar['name']:
+#         print(f"name:{monstar['name']}\n type:{monstar['type']}\n power:{monstar['power']}")
+#         break
+# else:
+#     print("monstar name is not in the file")
+
+
+
+--Assignment 8:
+Create a file-based contact manager:
+
+Store contacts (name, phone, email) in a CSV.
+
+View all contacts, search by name, and add new ones.
+
+Optional: Save and load data in JSON too.
+
+
+
+import csv
+def contact_manager():
+    contact_list=[]
+    with open("contact.csv",'w',newline='') as file:
+        writer=csv.writer(file)
+        for row in range(2):
+            name=input("enter the name :" )
+            ph_no=input("enter the ph number: ")
+            email=input("enter the email id: ")
+            writer.writerow([name,ph_no,email])
+    with open("contact.csv",'r',newline='') as file:
+        reader=csv.reader(file)
+        print("veiw all the contacts: ")
+        for row in reader:
+            print(row)
+            contact_list.append(row)
+    search_name=input("enter name to search: ")
+    for contact in contact_list:
+        if  contact[0] == search_name:
+            print(f"contact name: {contact}")
+            break
+        else:
+            print("not found")
+    add_contact=input("add the contact: ")
+    if add_contact in contact_list:
+        print("name is already exsist:")
+    else:
+        ph_no=input("enter the ph number: ")
+        email=input("enter the email id: ") 
+contact_manager()
+
+
+
+
+day 16&17
+Assignment 1: Student Report Card System
+Objective: Create a class that manages a student’s name, roll number, and marks in 3 subjects.
+
+Requirements:
+
+Class Student with attributes: name, roll_no, marks (as a list of 3 subjects).
+
+Methods:
+  
+add_marks() – input marks from the user
+
+calculate_total() – return total marks
+
+calculate_average() – return average
+
+display_report() – print the report card
+
+class student:
+#     def __init__(self,name,roll_no,marks=0):
+#         self.name=name
+#         self.roll_no=roll_no
+#         self.marks=marks
+#     def add_marks(self):
+#         sub_marks=[]
+#         for i in range(3):
+#             add_marks=int(input("enter the marks: "))
+#             sub_marks.append(add_marks)
+#             self.marks=sub_marks
+#     def calculate_total(self):
+#         return sum(self.marks)
+#     def calculate_average(self):
+#         return sum(self.marks)/len(self.marks)
+#     def display_report(self):
+#         total_marks=self.calculate_total()
+#         average=self.calculate_average()
+#         print(f"name:{self.name},roll_no:{self.roll_no},marks:{self.marks},total:{total_marks},average:{average}")
+# grade_book=student("john",34)
+# grade_book.add_marks()
+# grade_book.display_report()
+
+
+
+Assignment 2: Library Book Tracker
+Objective: Simulate a library book management system.
+
+Class: Book
+Attributes:
+
+title, author, available (default = True)
+
+Methods:
+
+borrow() – mark as not available
+
+return_book() – mark as available
+
+display_status() – show book info and availability
+
+📌 Bonus: Create multiple book objects and manage them in a list
+
+# class book:
+#     def __init__(self,title,author,avaliability):
+#         self.title=title
+#         self.author=author
+#         self.avaliability=avaliability 
+#     def borrow(self):
+#         title=input("enter the title: ")
+#         if title == self.title:
+#             print(f"{self.title} is available")
+#         else:
+#             print("title as not avaliable")
+#     def return_book(self):
+#         title=input("enter the title: ")
+#         if title==self.title:
+#             print(f"{self.title} has been returned")
+#         else:
+#             print("as not borrow")
+
+#     def display(self):
+#         print(f"title:{self.title},author:{self.author},{self.avaliability}")
+# library_book=[book("data science","joel gurs","avaliability"),book("java","sun microsystem","avaliability")]
+# for book in library_book:
+#     book.display()
+# book.borrow()
+# book.return_book()
+# book.display()
+
+
+
+Assignment 4: RPG Character Upgrade System (Game-Based)
+Class: Hero
+Attributes: name, level, xp
+
+Methods:
+
+gain_xp(points) – adds XP
+
+check_level_up() – every 100 XP → level up
+
+display_status() – show current level and XP
+
+💡 Bonus: Let the user simulate fights to gain XP.
+
+
+
+Assignment 5: Car Showroom System
+Objective: Model a car and its behavior.
+
+Class: Car
+Attributes: brand, model, price, available
+Methods:
+
+sell() – mark as not available
+
+display_info() – print car details
+
+
+# class car:
+#     def __init__(self,brand,model,price,available):
+#         self.brand=brand
+#         self.model=model
+#         self.price=price
+#         self.available=available
+#     def sell(self):
+#         name=input("enter the brand: ")
+#         if name!= self.brand:
+#             print("not available")
+#         else:
+#             print("available")
+#     def display(self):
+#         print(f"brand:{self.brand},model:{self.model},price:{self.price},available")
+# my_car=car("audi","Q3",44.99,"available")
+# my_car.sell()
+# my_car.display()
+
+
+
+Assignment 6: Movie Ticket Booking
+Objective: Handle movie show and seat booking.
+
+Class: MovieShow
+Attributes: title, total_seats, booked_seats
+Methods:
+
+book_tickets(n) – book n tickets if available
+
+cancel_tickets(n) – cancel n tickets
+
+display_status() – show available and booked seats
+
+
+
+class MovieShow():
+    def __init__(self,title,total_seats,booked_seats):
+        self.title=title
+        self.total_seats=total_seats
+        self.booked_seats=booked_seats
+    def booked_info(self):
+        n=input("enter the no of seats to book: ")
+        total_seats=input("enter the total seats: ")
+        booked_seats=n
+        if booked_seats<total_seats:
+            print("seats are not available")
+        else:
+            print("seats are available")
+    def cancel_seats(self):
+        cancel_seats=input("enter the no of seats to cancel: ")
+        if self.cancel_seats ==self.booked_seats:
+            print("seats are cancelled")
+        else:
+            print("you have not booked any seats")
+    def display(self):
+        print(f"title:{self.title},total_seats:{self.total_seats},booked_seats:{self.booked_seats}")
+A=MovieShow("movie",100,50)
+A.booked_info()
+A.cancel_seats()
+A.display()
+
+
+
+
+
+day_18
+
+
+Vehicle System
+
+Base class: Vehicle (speed, capacity)
+
+Subclasses: Car, Bus, Bike
+
+Each class should define its own describe() method
+
+
+Vehicle System
+Base class: Vehicle (speed, capacity)
+
+Subclasses: Car, Bus, Bike
+
+Each class should define its own describe() method
+
+# class Vehicle:
+#     def __init__(self, speed, capacity):
+#         self.speed = speed
+#         self.capacity = capacity
+
+# class Car(Vehicle):
+#     def speed_info(self):
+#         print(f"Speed: {self.speed}")
+
+#     def capacity_info(self):
+#         print(f"Capacity: {self.capacity}")
+
+# class Bus(Vehicle):
+#     def speed_info(self):
+#         print(f"Speed: {self.speed}")
+
+#     def capacity_info(self):
+#         print(f"Capacity: {self.capacity}")
+
+# # Create objects
+# a = Car("40 km", "4 members")
+# b = Bus("50 km", "20 members")
+
+# # Call methods
+# a.speed_info()
+# a.capacity_info()
+# b.speed_info()
+# b.capacity_info()
+
+
+
+Employee Hierarchy
+Employee as base class
+
+Manager and Developer as subclasses
+
+Add a method calculate_salary() which behaves differently
+
+
+class employee:
+    def __init__(self,name,salary):
+        self.name=name
+        self.salary=salary
+    def display(self):
+        print(f"name:{self.name},salary:{self.salary}")
+class manager(employee):
+    def calculate_salary(self):
+        super().display()
+class developer(employee):
+    def calculate_salary(self):
+        super().display()
+a=manager("sai",30000)
+b=developer("kiran",20000)
+a.calculate_salary()
+b.calculate_salary()
+
+
+
+School Members
+Base class: Person (name, age)
+
+Subclasses: Teacher, Student
+
+Add specific methods like teach() and study()
+
+# class person:
+#     def __init__(self,name,age):
+#         self.name=name
+#         self.age=age
+#     def display(self):
+#         print(f"name:{self.name},age:{self.age}")
+# class student(person):
+#     def study(self):
+#         super().display()
+# class teacher(person):
+#     def teach(self):
+#         super().display()
+# s=student("john",20)
+# a=teacher("jane",30)
+# s.study()
+# a.teach()    
+
+
+
+## 📚 **Day 22 Assignments**
+
+---
+
+### 🔹 **Assignment 1: Square Mapper**
+
+**Objective:** Take a list of numbers and return their squares using `map()` and `lambda`.
+
+🧩 *Input:* `[2, 4, 6, 8]`
+🧮 *Output:* `[4, 16, 36, 64]`
+
+---
+
+### 🔹 **Assignment 2: Even Number Filter**
+
+**Objective:** Use `filter()` and `lambda` to extract only even numbers from a user-provided list.
+
+🧩 *Input:* `[5, 12, 17, 18, 24, 33]`
+✅ *Output:* `[12, 18, 24]`
+
+---
+
+### 🔹 **Assignment 3: Product Calculator (Using `reduce`)**
+
+**Objective:** Multiply all numbers in a list using `reduce()` and `lambda`.
+
+🧩 *Input:* `[1, 2, 3, 4, 5]`
+✖️ *Output:* `120`
+
+---
+
+### 🔹 **Assignment 4: Clean Usernames**
+
+**Objective:** Remove leading/trailing whitespaces from a list of usernames using `map()` and `lambda`.
+
+🧩 *Input:* `[" Alice ", "Bob ", " Charlie", " Dana "]`
+🧼 *Output:* `["Alice", "Bob", "Charlie", "Dana"]`
+
+---
+
+### 🔹 **Assignment 5: Word Length Filter**
+
+**Objective:** From a list of words, filter out words shorter than 5 characters.
+
+🧩 *Input:* `["tree", "apple", "sun", "python", "code"]`
+🧾 *Output:* `["apple", "python"]`
+
+---
+
+### 🔹 **Assignment 6: Game — Spell Power Enhancer**
+
+**Story:** You are designing a game where spells increase their power by a given factor. Use `map()` and `lambda` to apply the factor.
+
+🎯 *Input:* `[10, 20, 30]` and factor `1.5`
+⚡ *Output:* `[15.0, 30.0, 45.0]`
+
+---
+
+### 🔹 **Assignment 7: Reduce Score to Final Rank**
+
+**Objective:** Use `reduce()` to sum all scores from a tournament and print the total.
+
+🎯 *Input:* `[250, 180, 320, 150]`
+🥇 *Output:* `900`
+
+---
+
+### 🔹 **Assignment 8: Number Classifier**
+
+**Objective:** From a user-given list, use `filter()` to extract:
+
+* Only positive numbers
+* Only negative numbers
+* Only odd numbers
+
+---
+
+### 🔹 **Assignment 9: First Character Uppercase**
+
+**Objective:** Convert the first character of each word in a sentence to uppercase using `map()` and `lambda`.
+
+🧩 *Input:* `"hello world from python"`
+✅ *Output:* `['Hello', 'World', 'From', 'Python']`
+
+---
+
+### 🔹 **Assignment 10: Combine Names Using Reduce**
+
+**Objective:** Given a list of names, use `reduce()` to combine them into a single string, separated by `" & "`.
+
+🧩 *Input:* `["Alice", "Bob", "Charlie"]`
+🔗 *Output:* `"Alice & Bob & Charlie"`
+
+Day -23 Assignments
+Assignment 1: Logger Decorator
+Objective: Write a decorator that logs the function name and its arguments every time it's called.
+
+Instructions:
+
+Define a decorator called log_call.
+
+It should print the function name and arguments before calling the function.
+
+Example:
+
+python
+Copy
+Edit
+@log_call
+def add(a, b):
+    return a + b
+
+add(3, 4)
+Expected Output:
+
+sql
+Copy
+Edit
+Function 'add' called with arguments: 3, 4
+
+Assignment 2: Timer Decorator
+Objective: Create a decorator that prints how long a function took to execute.
+
+Instructions:
+
+Define a decorator timer that records the start and end time of the function execution.
+
+Example:
+
+python
+Copy
+Edit
+@timer
+def wait():
+    for _ in range(1000000):
+        pass
+
+wait()
+Expected Output:
+
+pgsql
+Copy
+Edit
+Function 'wait' took 0.12 seconds to run
+Assignment 3: Access Control Decorator
+Objective: Simulate a login system with an @admin_only decorator.
+
+Instructions:
+
+Use a global variable current_user = "admin" or "guest".
+
+If the user is not "admin", deny access.
+
+Example:
+
+python
+Copy
+Edit
+@admin_only
+def delete_data():
+    print("Data deleted.")
+Expected Output (if user is not admin):
+
+pgsql
+Copy
+Edit
+Access Denied. Admins only.
+Assignment 4: Power-Up Decorator (Game)
+Objective: Create a decorator that doubles the output of a function (like a power-up in games).
+
+Instructions:
+
+Create @double_power that multiplies return value by 2.
+
+Example:
+
+python
+Copy
+Edit
+@double_power
+def base_attack():
+    return 50
+Expected Output:
+
+Copy
+Edit
+100
+Assignment 5: Repeat Decorator
+Objective: Write a decorator that repeats the function execution n times.
+
+Instructions:
+
+Accept times as an argument to the decorator.
+
+Example:
+
+python
+Copy
+Edit
+@repeat(times=3)
+def greet():
+    print("Hello!")
+Expected Output:
+
+Copy
+Edit
+Hello!
+Hello!
+Hello!
+Assignment 6: Input Validator
+Objective: Create a decorator that checks if all inputs to a function are positive integers.
+
+Example:
+
+python
+Copy
+Edit
+@check_positive
+def multiply(a, b):
+    return a * b
+Expected Output:
+
+If a = -1, print:
+
+sql
+Copy
+Edit
+Invalid input: Only positive numbers are allowed.
