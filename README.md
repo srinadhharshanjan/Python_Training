@@ -582,3 +582,44 @@ Timing				@timer 		decorator to measure execution time
 Testing				@pytest.mark.skip, @unittest.skip
 Web Frameworks			Flask uses @app.route('/home') to define endpoints
 Game Mechanics			@boost, @shield for dynamic player state changes
+
+Day-23
+
+
+What is a Module?
+A module is a Python file (.py) that contains definitions and statements — typically functions, classes, or variables.
+
+What is a Package?
+A package is a collection of modules in a directory with a special __init__.py file.
+
+shop/
+│
+├── __init__.py
+├── inventory.py
+└── billing.py
+
+# inventory.py
+def show_items():
+    return ["Sword", "Potion", "Shield"]
+# billing.py
+def total_price(items):
+    prices = {"Sword": 100, "Potion": 50, "Shield": 150}
+    return sum(prices[item] for item in items)
+# main.py
+from inventory import show_items
+from billing import total_price
+
+items = show_items()
+print("Items:", items)
+print("Total:", total_price(items))
+
+
+Day-24
+Virtual Environment (venv)
+A virtual environment is an isolated Python environment to manage dependencies for a project.
+
+python -m venv myenv
+
+
+Pip - Python Package Installer
+Use pip to install external libraries.
